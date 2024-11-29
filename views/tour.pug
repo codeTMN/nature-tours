@@ -4,10 +4,6 @@ include _reviewCard
 block append head
   script(src='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js')
   link(href='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet')
-<<<<<<< HEAD
-  //- script(src='https://js.stripe.com/v3/')
-=======
->>>>>>> 919631285b4e87442e7d296a153a2e97ca22152f
 
 mixin overviewBox(label, text, icon)
   .overview-box__detail
@@ -92,27 +88,4 @@ block content
         if user
           button.btn.btn--green.span-all-rows#book-tour(data-tour-id=`${tour.id}`) Book tour now!
         else
-<<<<<<< HEAD
           a.btn.btn--green.span-all-rows(href='/login') Log in to book tour
-
-block scripts
-  script(src='/js/stripe.js')
-  script.
-    const stripe = Stripe('sk_test_51QNq5tJu5mWZxVALAAmNT1NI7nv77N9zyVrwoLnNOKzofhCdNrI8X47wOK0PbnvHSwPfHAD1ybBJSkrkvyMKgh5e004JlDXn5x');
-    const bookBtn = document.getElementById('book-tour');
-    if (bookBtn) {
-      bookBtn.addEventListener('click', async e => {
-        e.target.textContent = 'Processing...';
-        const { tourId } = e.target.dataset;
-        try {
-          await bookTour(tourId);
-        } catch (err) {
-          e.target.textContent = 'Book tour now!';
-          console.error('Booking error:', err);
-          showAlert('error', 'Error booking tour. Please try again.');
-        }
-      });
-    }
-=======
-          a.btn.btn--green.span-all-rows(href='/login') Log in to book tour
->>>>>>> 919631285b4e87442e7d296a153a2e97ca22152f

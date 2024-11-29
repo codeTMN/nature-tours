@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 // models/bookingModel.js
-=======
->>>>>>> 919631285b4e87442e7d296a153a2e97ca22152f
 const mongoose = require('mongoose');
 
 const bookingSchema = new mongoose.Schema({
@@ -17,11 +14,7 @@ const bookingSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
-<<<<<<< HEAD
     required: [true, 'Booking must have a price.']
-=======
-    require: [true, 'Booking must have a price.']
->>>>>>> 919631285b4e87442e7d296a153a2e97ca22152f
   },
   createdAt: {
     type: Date,
